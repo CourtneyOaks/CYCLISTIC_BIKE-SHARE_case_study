@@ -1,5 +1,6 @@
 # CYCLISTIC BIKE-SHARE case study
-Courtney Oaks, 2/27/2022
+
+Courtney Oaks, 02/27/2022, Data Analytics Professional Certification capstone project
 
 ### About the company
 
@@ -30,18 +31,19 @@ The data for this project has been provided by Cyclistic, and made available by 
 
 ### Preparation and processing of the data
 
-Download the provided 12 zip files. Decide on the best analysis tools to use for this job. The combined datasets were too large to use Excel or Google Sheets, so I choose to use R Desktop to clean, analyze, and create clear visualizations. 
+Downloaded and renamed the provided 12 zip files. Decided on the best analysis tools to use for this job. The combined datasets were too large to use Excel or Google Sheets, so I choose to use RStudio to clean, analyze, and create clear visualizations. 
 
 Installed necessary packages.
-
 - install.packages("tidyverse")
 - install.packages("lubridate")
 - install.packages("ggplot2")
+
+Next, I downloaded the necessary libraries.
 - library("tidyverse")
 - library("lubridate")
 - library("ggplot2")
 
-Utilized the read_csv() function to read the 12 csv files containing Cyclistic's ride data.
+I utilized the read_csv() function to read the 12 csv files containing Cyclistic's ride data.
 
 - data0122 <-read_csv("202201-divvy-tripdata 2.csv")
 - data1221 <-read_csv("202112-divvy-tripdata.csv")
@@ -56,7 +58,7 @@ Utilized the read_csv() function to read the 12 csv files containing Cyclistic's
 - data0321 <-read_csv("202103-divvy-tripdata.csv")
 - data0221 <-read_csv("202102-divvy-tripdata.csv")
 
-Inspected data, using the following R functions. 
+Inspected data in various ways, using the following functions. 
 
 - View(cycle_trips)
 - str(cycle_trips)
@@ -64,11 +66,11 @@ Inspected data, using the following R functions.
 - summary(cycle_trips)
 - colnames(cycle_trips)
 
-Confirmed that all datasets have the same column names and proceeded to combine the 12 csv files into one dataset to make the data easier to work with. This was completed using the bind() function. 
+I confirmed that all datasets have the same column names and proceeded to combine the 12 csv files into one dataset to make the data easier to work with. This was completed using the bind() function. 
 
 - cycle_trips<-bind_rows(data0122,data1221,data1121,data1021,data0921,data0821,data0721,data0621,data0521,data0421,data0321,data0221)
 
-Renamed various columns, reformatted the dates column, and created a "ride_length" column to our dataset. 
+Proceeded with renaming various columns, reformatted the dates column, and creating a "ride_length" column to the dataset. 
 
 - rename(cycle_trips
        ,start_time=started_at
@@ -81,7 +83,7 @@ Renamed various columns, reformatted the dates column, and created a "ride_lengt
 - cycle_trips $ ride_length<-difftime(cycle_trips $ ended_at,cycle_trips$started_at)       
 - cycle_trips $ ride_length<-as.numeric(as.character(cycle_trips $ ride_length))  
 
-Reviewed the data again, using the summary function, to ensure all changes made are working correctly.
+I reviewed the data again, using the summary function, to ensure all the changes the were made are working correctly.
 
 - summary(cycle_trips) 
 
@@ -102,7 +104,7 @@ Compared various pieces of data, including an analysis on ride length between ca
             cycle_trips$day_of_week, FUN = mean)
             
 
-In the results, I did notice that the dates were mixed up, so I used the following formula to reorder.
+In the results, I did notice that the dates were mixed up so I used the following formula to reorder.
 
 - cycle_trips $ day_of_week<-ordered(cycle_trips$day_of_week,levels=c("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"))
 
