@@ -29,7 +29,7 @@ Use ride data from the last 12 months to come up with a strategy for the marketi
 The data for this project has been provided by Cyclistic, and made available by Motivate International Inc. which operates the City of Chicago's Divvy bicycle-sharing service. To see the data source, please click [link](https://divvy-tripdata.s3.amazonaws.com/index.html). The Motivate Internations Inc. license can be viewed at [link](https://www.divvybikes.com/data-license-agreement).
 
 
-### Preparation and processing of the data
+### Preparation, processing and analysis of the data
 
 Downloaded and renamed the provided 12 zip files. Decided on the best analysis tools to use for this job. The combined datasets were too large to use Excel or Google Sheets, so I choose to use RStudio to clean, analyze, and create clear visualizations. 
 
@@ -87,8 +87,6 @@ I reviewed the data again, using the summary function, to ensure all the changes
 
 - *summary(cycle_trips)*
 
-
-### Analyze
 
 Compared various pieces of data, including an analysis on ride length between casual riders and annual members to provide insights of differences between the two. Compared data on members verses casual users using the aggregate function. 
 
