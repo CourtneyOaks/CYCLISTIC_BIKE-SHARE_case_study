@@ -150,7 +150,8 @@ I used the following formula to produce a data visualization for number of rides
   geom_col(position = "dodge") +
   labs(title= "Ride per month", subtitle="Members vs. casual users")*
   
-![Cyclistic_Visual1](https://user-images.githubusercontent.com/102244119/161450052-7e67ff89-94b1-43ae-802e-c3feed44fcb7.png)
+![Cyclistic_visual3](https://user-images.githubusercontent.com/102244119/201549222-123e1482-30e8-4337-9b84-b325e409760e.png)
+
 
 
 ### Takeaways
