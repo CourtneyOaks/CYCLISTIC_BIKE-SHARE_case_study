@@ -2,15 +2,15 @@
 
 Courtney Oaks, 02/27/2022, Data Analytics Professional Certification capstone project
 
-###About the company
+## About the company
 
 Cyclistic is a (fictional) bike-share company located in Chicago. Cyclistic sets itself apart by also offering reclining bikes, hand tricycles, and cargo bikes, making bike-share more inclusive to people with disabilities and riders who can't use a standard two-wheeled bike. The majority of riders opt for traditional bikes; about 8% of riders use assistive options. Cyclistic users are more likely to ride for leisure, but about 30% use them to commute to work each day. Until now, Cyclistic’s marketing strategy relied on building general awareness and appealing to broad consumer segments. One approach that helped make these things possible was the flexibility of its pricing plans: single-ride passes, full-day passes, and annual memberships. Customers who purchase single-ride or full-day passes are referred to as casual riders. Customers who purchase annual memberships are Cyclistic members.
 
-### Scenario
+## Scenario
 
 You are a junior data analyst working in the marketing analyst team at Cyclistic. The director of marketing believes the company's future success depends on maximizing the number of annual members. Your team wants to understand how casual riders and annual members use Cyclistic bikes differently. From your insights, your team will design a new marketing strategy to convert casual riders into annual members. 
 
-### Stakeholders
+## Stakeholders
 
 - Cyclistic: A (fictional) bike-share company that features more than 5,800 bicycles and 600 docking stations.
 
@@ -20,16 +20,16 @@ You are a junior data analyst working in the marketing analyst team at Cyclistic
 
 - Cyclistc executive team: The notoriously detail-oriented executive team will decide whether to approve the recommended marketing program.
 
-### Business task
+## Business task
 
 Use ride data from the last 12 months to come up with a strategy for the marketing team to help convert casual riders into annual members. Use the data to provide insights into differences between casual riders and annual members and give recommendations. 
 
-### Data Source 
+## Data Source 
 
 The data for this project has been provided by Cyclistic, and made available by Motivate International Inc. which operates the City of Chicago's Divvy bicycle-sharing service. To see the data source, please click [link](https://divvy-tripdata.s3.amazonaws.com/index.html). The Motivate Internations Inc. license can be viewed at [link](https://www.divvybikes.com/data-license-agreement).
 
 
-### Preparation, processing, and analysis of the data
+## Preparation, processing, and analysis of the data
 
 Downloaded and renamed the provided 12 zip files. Decided on the best analysis tools to use for this job. The combined datasets were too large to use Excel or Google Sheets, so I choose to use RStudio to clean, analyze, and create clear visualizations. 
 
@@ -107,7 +107,7 @@ In the results, I did notice that the days of the week were not in order so I us
 - *cycle_trips $ day_of_week<-ordered(cycle_trips$day_of_week,levels=c("Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"))*
 
 
-### Findings with data visualizations
+## Findings with data visualizations
 
 I used the following formula to produce a data visualization for the average ride duration for each day of the week.
 
@@ -154,14 +154,14 @@ I used the following formula to produce a data visualization for number of rides
 
 
 
-### Takeaways
+## Takeaways
 
 - Members take a consistent number of rides throughout the week, pointing toward commuter use.
 - Casual riders take a higher number of rides on Saturdays and Sundays, pointing toward recreational use. 
 - Casual riders take longer rides than members, with more than twice the average duration of ride time.
 - The peak months for causal riders are May through September, with members taking a higher number of rides from June through October.
 
-### Recommendations
+## Recommendations
 
 - Decrease the cost of single-ride and full-day passes for first-time and casual riders on weekdays. This will help encourage commuter use in new customers and casual riders, increasing overall memberships.
 - Run promotions in marketing campaigns centered around winter riding to increase off-season use and increase memberships.
